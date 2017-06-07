@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-md-5">
+		<app-vook-list (vookSelected)="selectedVook =$event"></app-vook-list>
+	</div>
+	<div class="col-md-7">
+		<app-vook-detail *ngIf = "selectedVook;else infoText" [vookDetail]= selectedVook></app-vook-detail>
+		<ng-template #infoText>
+			Please select a vook .
+		</ng-template>
+	</div>
+</div>
